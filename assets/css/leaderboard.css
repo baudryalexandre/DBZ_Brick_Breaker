@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* spacing */
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid purple;
+}
+
+thead th:nth-child(1) {
+  width: 25%;
+}
+
+thead th:nth-child(2) {
+  width: 25%;
+}
+
+thead th:nth-child(3) {
+  width: 25%;
+}
+
+th,
+td {
+  padding: 20px;
+}
+
+/* typography */
+
+html {
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+thead th {
+  font-family: 'Rock Salt', cursive;
+}
+
+th {
+  letter-spacing: 2px;
+}
+
+td {
+  letter-spacing: 1px;
+}
+
+tbody td {
+  text-align: center;
+}
+
+/* graphics */
+
+thead,
+tfoot {
+  color: white;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #e006aa;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e495e4;
+}
+
+table {
+  background-color: #582aac;
+}
+
+/* caption */
+
+caption {
+  font-family: 'Rock Salt', cursive;
+  background-color: #582aac;
+  border: 3px solid purple;
+  margin-bottom: -3px;
+  padding: 20px;
+  font-style: italic;
+  color: white;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+#btnLinkLeaderboard {
+  font-family: 'Rock Salt', cursive;
+  background-color: #582aac;
+  width: 20%;
+  padding: 20px;
+  color: white;
+  border: 3px solid purple;
+  margin-top: -3px;
+  text-align: center;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+#pagination, #divReturnHome{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5rem;
+}
+
+.btn{
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
