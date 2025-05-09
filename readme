@@ -1,0 +1,68 @@
+
+# 🧱 DBZ Brick Breaker
+
+Un jeu de type Brick Breaker inspiré de l'univers **Dragon Ball Z**, développé principalement en **JavaScript**, avec des composants en **CSS**, **HTML** et **Go**.
+
+## 🎮 Aperçu
+
+DBZ Brick Breaker est un jeu web où le joueur contrôle une raquette pour détruire des briques à l'aide d'une balle. Le jeu intègre des éléments visuels et sonores rappelant l'univers de Dragon Ball Z.
+
+## 🚀 Fonctionnalités
+
+- Interface utilisateur dynamique avec JavaScript
+- Styles personnalisés avec CSS
+- Structure HTML pour le rendu du jeu
+- Composants backend en Go pour la gestion des scores et des niveaux
+- Intégration de ressources visuelles et sonores thématiques
+
+## 🛠️ Installation
+
+### Prérequis
+
+- Navigateur web moderne (Chrome, Firefox, Edge, etc.)
+- Serveur Go pour exécuter les composants backend
+
+### Étapes
+
+1. Clonez le dépôt :
+   ```bash
+   git clone https://github.com/baudryalexandre/DBZ_Brick_Breaker.git
+   ```
+
+2. Accédez au répertoire du projet :
+   ```bash
+   cd DBZ_Brick_Breaker
+   ```
+
+3. Lancez le serveur Go :
+   ```bash
+   go run cmd/server.go
+   ```
+
+4. Ouvrez votre navigateur et accédez à `http://localhost:8080` pour jouer.
+
+## 📁 Structure du projet
+
+```
+DBZ_Brick_Breaker/
+├── assets/         # Ressources visuelles et sonores
+├── cmd/            # Code source Go pour le backend
+├── internal/       # Modules internes pour la logique du jeu
+├── templates/      # Fichiers HTML pour le rendu du jeu
+├── website/        # Fichiers CSS et JavaScript pour le frontend
+├── go.mod          # Fichier de configuration Go
+├── index.html      # Page principale du jeu
+└── README.md       # Ce fichier
+```
+
+## 👤 Auteur
+
+- **Alexandre Baudry** – [GitHub](https://github.com/baudryalexandre)
+
+## 📜 Licence
+
+Ce projet est open-source et sous licence [MIT](LICENSE).
+
+---
+
+Amusez-vous bien ! 🔥
