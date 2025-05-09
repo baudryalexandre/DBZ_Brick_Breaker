@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+    <script type="module" src="/static/js/index.js" defer></script>
+
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <!-- <input type="text" name="" id="name">
+        <input type="text" name="" id="score">
+        <button id="addUserButton" type="submit">envoie</button> -->
+
+        <div id="divMain">
+            <div id="leaderIndex">
+                <table>
+                    <caption>
+                        Leaderboard Top 10
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Position</th>
+                            <th scope="col">Player</th>
+                            <th scope="col">Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboard-list">
+
+                    </tbody>
+                </table>
+                <button id="btnLinkLeaderboard">Vers le Leaderboard</button>
+            </div>
+            <div>
+                <div>
+                    <h1 id="titleGame">Make Your Break</h1>
+                </div>
+                <div id="gameZone">
+                    
+                    <div id="game-container">
+                        <div id="paddle" class="hidden"></div>
+                        <div id="ball" class="hidden"></div>
+                        <div id="gameHUD">
+                            <div id="score" class="hidden">Score: 0</div>
+                            <div id="lives" class="hidden">Lives: 3</div>
+                            <div id="timer" class="hidden">Time: 00:00</div>
+                        </div>
+                        <div id="bricks-container"></div>
+                        <div id="pause-screen" class="hidden">
+                            <div class="pause-box" class="hidden">
+                                <button id="continue-btn">Continue</button>
+                                <button id="restart-btn">Restart</button>
+                                <button id="quit-btn">Quit</button>
+                            </div>
+                        </div>
+                        <div id="end-screen" class="hidden">
+                            <div class="end-box">
+                                <button id="restart-btn-end">Restart</button>
+                                <button id="quit-btn-end">Quit</button>
+                            </div>
+                        </div>
+                        <div id="intervalleMap" class="hidden">
+                            <h2 id="niveauMap">test</h2>
+                        </div>
+                        <div id="start-screen">
+                            <div class="menu-options">
+                                <button id="story-btn">Story</button>
+                                <button id="play-btn">Arcade</button>
+                                <button id="true_quit-btn">Quit</button>
+                            </div>
+                        </div>
+                        <div id="gameOver" class="hidden">
+                            <h2>Game Over</h2>
+                                <input type="text" id="username">
+                                <button id="submitUser">Envoyer</button> 
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div id="fps-counter"></div>
+        </div>
+
+
+    </main>
+</body>
+
+</html>

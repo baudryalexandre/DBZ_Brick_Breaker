@@ -1,0 +1,436 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* spacing */
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid purple;
+}
+
+thead th:nth-child(1) {
+  width: 25%;
+}
+
+thead th:nth-child(2) {
+  width: 25%;
+}
+
+thead th:nth-child(3) {
+  width: 25%;
+}
+
+th,
+td {
+  padding: 20px;
+}
+
+/* typography */
+
+html {
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+thead th {
+  font-family: 'Rock Salt', cursive;
+}
+
+th {
+  letter-spacing: 2px;
+}
+
+td {
+  letter-spacing: 1px;
+}
+
+tbody td {
+  text-align: center;
+}
+
+/* graphics */
+
+thead,
+tfoot {
+  color: white;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #aaa8b9;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #cfe3ec;
+}
+
+table {
+  background-color: #582aac;
+}
+
+/* caption */
+
+caption {
+  font-family: 'Rock Salt', cursive;
+  background-color: #8967c9;
+  border: 3px solid purple;
+  margin-bottom: -3px;
+  padding: 20px;
+  font-style: italic;
+  color: white;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+#btnLinkLeaderboard {
+  font-family: 'Rock Salt', cursive;
+  background-color: #582aac;
+  width: 100%;
+  padding: 20px;
+  color: white;
+  border: 3px solid purple;
+  margin-top: -3px;
+  text-align: center;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+#divMain {
+  display: flex;
+  background-color: #f0f0f0;
+  height: 100vh;
+}
+
+#leaderIndex {
+  width: 25%;
+  margin-top: 4rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+#titleGame {
+  text-align: center;
+}
+
+#gameZone {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 1000px;
+  height: 700px;
+  border: 1px solid #000;
+  justify-content: center;
+  height: 80vh;
+
+
+}
+
+#game-container {
+  position: relative;
+  width: 1000px;
+  height: 100%;
+  overflow: hidden;
+  /* cursor: none; */
+}
+
+#paddle {
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  background-image: url("../img/55-Breakout-Tiles.png");
+  background-size: 100% 100%;
+  bottom: 10px;
+  left: 250px;
+}
+
+.brick {
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  background-color: #4caf50;
+  border: 1px solid #333;
+}
+
+#ball {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/58-Breakout-Tiles.png");
+  background-size: 100% 100%;
+  border-radius: 50%;
+  bottom: 50px;
+  left: 290px;
+}
+
+#gameHUD {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+#score {
+  font-size: 16px;
+  color: #333;
+}
+
+
+#pause-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+#continue-btn,
+#restart-btn,
+#quit-btn {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ------------------------------------------------------------- */
+#pause-screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(68, 63, 63, 0.8);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.pause-box {
+  display: flex;
+  padding: 5px;
+  gap: 5px;
+  justify-content: center;
+}
+
+#start-screen.hidden {
+  display: none;
+}
+
+.pause-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+#end-screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(68, 63, 63, 0.8);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.end-box {
+  display: grid;
+  padding: 5px;
+  gap: 5px;
+  justify-content: center;
+}
+
+/* POUR LE MENU DE DEPART */
+
+#start-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background-color: #f0f0f0;
+}
+
+#gameOver {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(68, 63, 63, 0.8);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  z-index: 999;
+}
+
+#intervalleMap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(68, 63, 63, 0.8);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  z-index: 999;
+}
+
+#end-message {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 4rem;
+  margin: 2rem 0;
+}
+
+.menu-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.brickGreen {
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  background-image: url('../img/03-Breakout-Tiles.png');
+  background-size: 100% 100%;
+  border: 1px solid #333;
+
+}
+
+.brickRed {
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  background-image: url('../img/07-Breakout-Tiles.png');
+  background-size: 100% 100%;
+  border: 1px solid #333;
+
+}
+
+.brickGrey {
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  background-image: url('../img/17-Breakout-Tiles.png');
+  background-size: cover;
+  border: 1px solid #333;
+
+}
+
+.brickBlue {
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  background-image: url('../img/01-Breakout-Tiles.png');
+  background-size: 100% 100%;
+  border: 1px solid #333;
+
+}
+
+
+/* ------------Story----------- */
+
+
+#divStory {
+  width: 90%;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#divName {
+  border: 3px solid red;
+  border-radius: 1rem 1rem 0 0;
+  padding: 0.5rem;
+  border-bottom: 3px solid #f0f0f0;
+  background-color: #f0f0f0;
+  width: 15%;
+  margin: 0 15%;
+  position: relative;
+  z-index: 2;
+  /* Valeur de z-index plus élevée pour #divName */
+
+}
+
+
+#divText {
+  width: 90%;
+  margin: 0 auto;
+  border: 3px solid orange;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: -3px;
+  position: relative;
+  /* Ajoutez cette ligne pour activer le z-index sur #divText */
+  z-index: 1;
+  /* Valeur de z-index moins élevée pour #divText */
+  height: 5rem;
+}
+
+#textName {
+  text-align: center;
+}
+
+#divPerso {
+  width: 80%;
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 30rem;
+}
+
+#perso1 {
+  position: relative;
+  float: left;
+  width: 40%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#perso2 {
+  position: relative;
+  float: right;
+  width: 40%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
