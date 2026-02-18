@@ -6,7 +6,7 @@ import (
 )
 
 func HomeHandler(w http.ResponseWriter, r *http.Request) {
-	tmpl := template.Must(template.ParseFiles("./templates/index.html"))
+	tmpl := template.Must(template.ParseFiles("./index.html"))
 	tmpl.Execute(w, nil)
 }
 
