@@ -615,13 +615,13 @@ const endStory = [
         "dialogue": `"Nous avons enfin réussis! La Terre et l'univers est sauvé! Nous pouvons être fier de ce nous avons accomplit et nous montrons que l'alliance est plus forte que tout!"`
     }, ],
     [{
-        "name": `Raditz `,
-        "perso": `Raditz `,
+        "name": `Raditz`,
+        "perso": `Raditz`,
         "dialogue": `"Voici la vrai puissance Saiyan!"`
     }, ],
     [{
-        "name": `Piccolo `,
-        "perso": `Piccolo `,
+        "name": `Piccolo`,
+        "perso": `Piccolo`,
         "dialogue": `"Nous avons échouer Jeune Saiyan, Freezer a detruit Namek!"`
     }, ],
     [{
@@ -630,8 +630,8 @@ const endStory = [
         "dialogue": `"Ma puissance est incommensurable!"`
     }, ],
     [{
-        "name": `Vegeta `,
-        "perso": `Vegeta `,
+        "name": `Vegeta`,
+        "perso": `Vegeta`,
         "dialogue": `"Je t'avais prévenu Jeune Saiyan! les cyborgs sont la race ultime"`
     }, ],
     [{

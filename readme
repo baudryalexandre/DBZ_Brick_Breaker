@@ -36,7 +36,7 @@ DBZ Brick Breaker est un jeu web où le joueur contrôle une raquette pour détr
 
 3. Lancez le serveur Go :
    ```bash
-   go run cmd/server.go
+   go run cmd/main.go
    ```
 
 4. Ouvrez votre navigateur et accédez à `http://localhost:8080` pour jouer.

@@ -1,112 +1,172 @@
+/* ------------------------------------------------ */
+/* RESET MINIMAL */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* spacing */
-
-table {
-  table-layout: fixed;
-  width: 100%;
-  border-collapse: collapse;
-  border: 3px solid purple;
-}
-
-thead th:nth-child(1) {
-  width: 25%;
-}
-
-thead th:nth-child(2) {
-  width: 25%;
-}
-
-thead th:nth-child(3) {
-  width: 25%;
-}
-
-th,
-td {
-  padding: 20px;
-}
-
-/* typography */
-
 html {
   font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* ------------------------------------------------ */
+/* CONTAINER */
+
+#leaderboard-wrapper {
+  width: 90%;
+  max-width: 1000px;
+  margin: 4rem auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(88, 42, 172, 0.15);
+  overflow: hidden;
+}
+
+/* ------------------------------------------------ */
+/* TABLE */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  border: 3px solid black;
+}
+
+/* HEADER */
+
+thead {
+  background-color: black;
+  color: white;
 }
 
 thead th {
+  padding: 1.2rem;
   font-family: 'Rock Salt', cursive;
-}
-
-th {
-  letter-spacing: 2px;
-}
-
-td {
   letter-spacing: 1px;
+  font-size: 1rem;
 }
+
+thead th:nth-child(1),
+thead th:nth-child(2),
+thead th:nth-child(3) {
+  width: 33%;
+}
+
+/* BODY */
 
 tbody td {
+  padding: 1rem;
   text-align: center;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
 }
 
-/* graphics */
-
-thead,
-tfoot {
-  color: white;
-}
+/* Alternance cohérente avec index */
 
 tbody tr:nth-child(odd) {
-  background-color: #e006aa;
+  background-color: darkgreen;
+  color: white;
+  border: 3px solid black;
+
 }
 
 tbody tr:nth-child(even) {
-  background-color: #e495e4;
+  background-color: green;
+  color: white;
+  border: 3px solid black;
+
 }
 
-table {
-  background-color: #582aac;
+/* Hover dynamique */
+
+tbody tr {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* caption */
+tbody tr:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ------------------------------------------------ */
+/* CAPTION */
 
 caption {
-  font-family: 'Rock Salt', cursive;
-  background-color: #582aac;
-  border: 3px solid purple;
-  margin-bottom: -3px;
-  padding: 20px;
-  font-style: italic;
+  background-color: darkred;
+  border: 3px solid black;
   color: white;
-  text-align: center;
+  font-family: 'Rock Salt', cursive;
+  padding: 1.5rem;
+  font-size: 1.3rem;
   letter-spacing: 1px;
 }
 
-#btnLinkLeaderboard {
-  font-family: 'Rock Salt', cursive;
-  background-color: #582aac;
-  width: 20%;
-  padding: 20px;
-  color: white;
-  border: 3px solid purple;
-  margin-top: -3px;
-  text-align: center;
-  letter-spacing: 1px;
-  cursor: pointer;
-}
+/* ------------------------------------------------ */
+/* PAGINATION & RETURN */
 
-#pagination, #divReturnHome{
+#pagination,
+#divReturnHome {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 5rem;
+  padding: 2rem 0;
+  gap: 1rem;
 }
 
-.btn{
-  padding: 0.5rem 1rem;
-  margin: 0 0.5rem;
+/* Boutons cohérents avec palette */
+
+.btn,
+#btnLinkLeaderboard {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: none;
   cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  background-color: darkred;
+  color: white;
+  transition: all 0.2s ease;
+  display: flex;
+
+}
+
+.btn:hover,
+#btnLinkLeaderboard:hover {
+  background-color: #401c85;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(88, 42, 172, 0.3);
+}
+
+#leaderIndex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+
+
+/* ------------------------------------------------ */
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  #leaderboard-wrapper {
+    width: 95%;
+  }
+
+  thead th,
+  tbody td {
+    padding: 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  caption {
+    font-size: 1rem;
+  }
 }
