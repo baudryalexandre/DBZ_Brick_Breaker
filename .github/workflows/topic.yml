@@ -26,8 +26,7 @@ jobs:
           # --- Back-end PHP ---
           [ -f composer.json ] && grep -q 'laravel' composer.json && TOPICS="$TOPICS,laravel"
           # --- Back-end Go ---
-          [ -f go.mod ] && TOPICS="$TOPICS,golang"
-          [ -f go.mod ] && grep -q 'net/http' go.mod || grep -rl 'net/http' . --include="*.go" > /dev/null 2>&1 && TOPICS="$TOPICS,rest-api"
+          grep -rl 'net/http' . --include="*.go" > /dev/null 2>&1 && TOPICS="$TOPICS,rest-api"
           # --- ES Modules ---
           grep -rl 'type="module"' . --include="*.html" > /dev/null 2>&1 && TOPICS="$TOPICS,es-modules"
           # --- JSON data ---
