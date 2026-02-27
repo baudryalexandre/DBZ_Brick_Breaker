@@ -69,9 +69,17 @@ jobs:
           grep -q 'Canva' README.md && TOPICS="$TOPICS,Canva"
           grep -q 'PowerPoint' README.md && TOPICS="$TOPICS,PowerPoint"
 
-          # Nettoyage
+          # Nettoyage initial
           TOPICS=$(echo $TOPICS | sed 's/^,//; s/,,/,/g')
-          echo "TOPICS=$TOPICS" >> $GITHUB_ENV
+          
+          # Normalisation pour GitHub Topics
+          # - tout en minuscules
+          # - espaces remplacés par des tirets
+          # - slash remplacé par des tirets
+          # - couper à 50 caractères si besoin
+          NORMALIZED_TOPICS=$(echo $TOPICS | tr '[:upper:]' '[:lower:]' | sed 's#[ /]#-#g' | cut -c1-50)
+          
+          echo "TOPICS=$NORMALIZED_TOPICS" >> $GITHUB_ENV
 
       - name: Set repository topics
         uses: actions/github-script@v6
