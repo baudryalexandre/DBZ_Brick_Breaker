@@ -71,13 +71,9 @@ jobs:
 
           # Nettoyage initial
           TOPICS=$(echo $TOPICS | sed 's/^,//; s/,,/,/g')
-          
-          # Normalisation pour GitHub Topics
-          # - tout en minuscules
-          # - espaces remplacés par des tirets
-          # - slash remplacé par des tirets
-          # - couper à 50 caractères si besoin
-          NORMALIZED_TOPICS=$(echo $TOPICS | tr '[:upper:]' '[:lower:]' | sed 's#[ /]#-#g' | cut -c1-50)
+
+          # Normalisation pour GitHub Topics : chaque topic <50 caractères, minuscules, tirets
+          NORMALIZED_TOPICS=$(echo $TOPICS | tr '[:upper:]' '[:lower:]' | tr ',' '\n' | sed 's#[ /]#-#g' | cut -c1-50 | tr '\n' ',' | sed 's/,$//')
           
           echo "TOPICS=$NORMALIZED_TOPICS" >> $GITHUB_ENV
 
